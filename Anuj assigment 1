@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+char getRandomCharacter() {
+    int randomNum = rand() % 16; // Generate a random number between 0 and 15
+    char ch;
+
+    if (randomNum < 10) {
+        ch = '0' + randomNum; // Convert the number to ASCII character for 0-9
+    } else {
+        ch = 'A' + (randomNum - 10); // Convert the number to ASCII character for A-F
+    }
+
+    return ch;
+}
+
+int main() {
+
+    char randomChar = getRandomCharacter();// Calling function
+
+    printf("THE RANDOMLY GENERATED CHARACTER IS  : %c\n", randomChar);
+
+    return 0;
+}
